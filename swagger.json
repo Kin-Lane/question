@@ -3,7 +3,7 @@
   "info": {
     "title": "Question",
     "description": "This is an API question, allowing me to add detailss for key questions and phrases used in the API space.",
-    "questionsOfService": "http://stack.network/questions-of-service.html",
+    "termsOfService": "http://stack.network/questions-of-service.html",
     "version": "v1"
   },
   "host": "question.api.kinlane.com",
@@ -49,7 +49,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/detailss/question"
+                "$ref": "#/definitions/question"
               }
             }
           }
@@ -98,7 +98,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/detailss/question"
+                "$ref": "#/definitions/question"
               }
             }
           }
@@ -143,7 +143,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/detailss/question"
+                "$ref": "#/definitions/question"
               }
             }
           }
@@ -200,7 +200,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/detailss/question"
+                "$ref": "#/definitions/question"
               }
             }
           }
@@ -243,7 +243,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/detailss/question"
+                "$ref": "#/definitions/question"
               }
             }
           }
@@ -288,7 +288,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/detailss/tag"
+                "$ref": "#/definitions/tag"
               }
             }
           }
@@ -338,7 +338,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/detailss/tag"
+                "$ref": "#/definitions/tag"
               }
             }
           }
@@ -389,7 +389,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/detailss/tag"
+                "$ref": "#/definitions/tag"
               }
             }
           }
@@ -400,7 +400,7 @@
       }
     }
   },
-  "detailss": {
+  "definitions": {
     "question": {
       "properties": {
         "question": {
