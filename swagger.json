@@ -78,7 +78,7 @@
             "type": "string"
           },
           {
-            "name": "question",
+            "name": "title",
             "in": "formData",
             "description": "name of the question",
             "required": true,
@@ -180,7 +180,7 @@
             "type": "string"
           },
           {
-            "name": "question",
+            "name": "title",
             "in": "formData",
             "description": "name of the question",
             "required": true,
@@ -403,7 +403,7 @@
   "definitions": {
     "question": {
       "properties": {
-        "question": {
+        "title": {
           "description": "name of the question",
           "type": "string",
           "format": "label"
