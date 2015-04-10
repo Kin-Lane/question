@@ -2,8 +2,8 @@
   "swagger": "2.0",
   "info": {
     "title": "Question",
-    "description": "This is an API question, allowing me to add definitions for key terms and phrases used in the API space.",
-    "termsOfService": "http://stack.network/terms-of-service.html",
+    "description": "This is an API question, allowing me to add detailss for key questions and phrases used in the API space.",
+    "questionsOfService": "http://stack.network/questions-of-service.html",
     "version": "v1"
   },
   "host": "question.api.kinlane.com",
@@ -17,8 +17,8 @@
   "paths": {
     "/question/": {
       "get": {
-        "summary": "question terms",
-        "description": "question terms",
+        "summary": "question questions",
+        "description": "question questions",
         "operationId": "getQuestionTerms",
         "parameters": [
           {
@@ -49,7 +49,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/question"
+                "$ref": "#/detailss/question"
               }
             }
           }
@@ -78,14 +78,14 @@
             "type": "string"
           },
           {
-            "name": "term",
+            "name": "question",
             "in": "formData",
             "description": "name of the question",
             "required": true,
             "type": "string"
           },
           {
-            "name": "definition",
+            "name": "details",
             "in": "formData",
             "description": "description of the question",
             "required": true,
@@ -98,7 +98,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/question"
+                "$ref": "#/detailss/question"
               }
             }
           }
@@ -110,14 +110,14 @@
     },
     "/question/{question_id}/": {
       "get": {
-        "summary": "question term",
-        "description": "question term",
+        "summary": "question question",
+        "description": "question question",
         "operationId": "getQuestionTerm",
         "parameters": [
           {
             "name": "question_id",
             "in": "path",
-            "description": "id for the question term",
+            "description": "id for the question question",
             "required": true,
             "type": "integer",
             "format": "id"
@@ -143,7 +143,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/question"
+                "$ref": "#/detailss/question"
               }
             }
           }
@@ -160,7 +160,7 @@
           {
             "name": "question_id",
             "in": "path",
-            "description": "id for the question term",
+            "description": "id for the question question",
             "required": true,
             "type": "integer",
             "format": "id"
@@ -180,14 +180,14 @@
             "type": "string"
           },
           {
-            "name": "term",
+            "name": "question",
             "in": "formData",
             "description": "name of the question",
             "required": true,
             "type": "string"
           },
           {
-            "name": "definition",
+            "name": "details",
             "in": "formData",
             "description": "description of the question",
             "required": true,
@@ -200,7 +200,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/question"
+                "$ref": "#/detailss/question"
               }
             }
           }
@@ -210,14 +210,14 @@
         ]
       },
       "delete": {
-        "summary": "delete question term",
-        "description": "delete question term",
+        "summary": "delete question question",
+        "description": "delete question question",
         "operationId": "deleteQuestionTerm",
         "parameters": [
           {
             "name": "question_id",
             "in": "path",
-            "description": "id for the question term",
+            "description": "id for the question question",
             "required": true,
             "type": "integer",
             "format": "id"
@@ -243,7 +243,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/question"
+                "$ref": "#/detailss/question"
               }
             }
           }
@@ -288,7 +288,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/tag"
+                "$ref": "#/detailss/tag"
               }
             }
           }
@@ -298,8 +298,8 @@
         ]
       },
       "post": {
-        "summary": "add question term",
-        "description": "add question term",
+        "summary": "add question question",
+        "description": "add question question",
         "operationId": "addQuestionTag",
         "parameters": [
           {
@@ -338,7 +338,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/tag"
+                "$ref": "#/detailss/tag"
               }
             }
           }
@@ -389,7 +389,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/tag"
+                "$ref": "#/detailss/tag"
               }
             }
           }
@@ -400,15 +400,15 @@
       }
     }
   },
-  "definitions": {
+  "detailss": {
     "question": {
       "properties": {
-        "term": {
+        "question": {
           "description": "name of the question",
           "type": "string",
           "format": "label"
         },
-        "definition": {
+        "details": {
           "description": "description of the question",
           "type": "string"
         }
