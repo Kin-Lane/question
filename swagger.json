@@ -1,0 +1,435 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Question",
+    "description": "This is an API question, allowing me to add definitions for key terms and phrases used in the API space.",
+    "termsOfService": "http://stack.network/terms-of-service.html",
+    "version": "v1"
+  },
+  "host": "question.api.kinlane.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/question/": {
+      "get": {
+        "summary": "question terms",
+        "description": "question terms",
+        "operationId": "getQuestionTerms",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "query",
+            "in": "query",
+            "description": "a text query to search across question",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "question response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/question"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Question"
+        ]
+      },
+      "post": {
+        "summary": "add question",
+        "description": "add question",
+        "operationId": "addQuestion",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "term",
+            "in": "formData",
+            "description": "name of the question",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "definition",
+            "in": "formData",
+            "description": "description of the question",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "question response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/question"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Question"
+        ]
+      }
+    },
+    "/question/{question_id}/": {
+      "get": {
+        "summary": "question term",
+        "description": "question term",
+        "operationId": "getQuestionTerm",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "description": "id for the question term",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "question response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/question"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Question"
+        ]
+      },
+      "put": {
+        "summary": "update question",
+        "description": "update question",
+        "operationId": "updateQuestionTerm",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "description": "id for the question term",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "term",
+            "in": "formData",
+            "description": "name of the question",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "definition",
+            "in": "formData",
+            "description": "description of the question",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "question response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/question"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Question"
+        ]
+      },
+      "delete": {
+        "summary": "delete question term",
+        "description": "delete question term",
+        "operationId": "deleteQuestionTerm",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "description": "id for the question term",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "question response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/question"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Question"
+        ]
+      }
+    },
+    "/question/{question_id}/tags/": {
+      "get": {
+        "summary": "question tags",
+        "description": "question tags",
+        "operationId": "getquestionTags",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "description": "id for question",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the question",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the question",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Question Tags Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      },
+      "post": {
+        "summary": "add question term",
+        "description": "add question term",
+        "operationId": "addQuestionTag",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "description": "id for the question",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the question",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the question",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tag",
+            "in": "formData",
+            "description": "tag name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Question Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      }
+    },
+    "/question/{question_id}/tags/{tag}": {
+      "delete": {
+        "summary": "delete question tag",
+        "description": "delete question tag",
+        "operationId": "deletequestionTag",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "description": "id for the question",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the question",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the question",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tag",
+            "in": "path",
+            "description": "tag to remove from question",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Question Tag Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "question": {
+      "properties": {
+        "term": {
+          "description": "name of the question",
+          "type": "string",
+          "format": "label"
+        },
+        "definition": {
+          "description": "description of the question",
+          "type": "string"
+        }
+      }
+    },
+    "tag": {
+      "properties": {
+        "tag_id": {
+          "description": "id for the tag",
+          "type": "integer",
+          "format": "id"
+        },
+        "tag": {
+          "description": "text tag",
+          "type": "string"
+        },
+        "api_count": {
+          "description": "number of items api with tag",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
