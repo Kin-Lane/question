@@ -406,6 +406,13 @@
         "operationId": "askQuestionOrganization",
         "parameters": [
           {
+            "name": "question_id",
+            "in": "path",
+            "description": "the id of the question to ask",
+            "required": true,
+            "type": "string"
+          },        
+          {
             "name": "appid",
             "in": "query",
             "description": "your appid for accessing the API",
