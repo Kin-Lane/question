@@ -15,7 +15,7 @@
     "application/json"
   ],
   "paths": {
-    "/question/": {
+    "/questions/": {
       "get": {
         "summary": "question questions",
         "description": "question questions",
@@ -108,7 +108,7 @@
         ]
       }
     },
-    "/question/{question_id}/": {
+    "/questions/{question_id}/": {
       "get": {
         "summary": "question question",
         "description": "question question",
@@ -253,7 +253,7 @@
         ]
       }
     },
-    "/question/{question_id}/tags/": {
+    "/questions/{question_id}/tags/": {
       "get": {
         "summary": "question tags",
         "description": "question tags",
@@ -348,7 +348,7 @@
         ]
       }
     },
-    "/question/{question_id}/tags/{tag}": {
+    "/questions/{question_id}/tags/{tag}": {
       "delete": {
         "summary": "delete question tag",
         "description": "delete question tag",
@@ -403,6 +403,11 @@
   "definitions": {
     "question": {
       "properties": {
+        "question_id": {
+          "description": "id for the question",
+          "type": "integer",
+          "format": "id"
+        },      
         "title": {
           "description": "name of the question",
           "type": "string",
