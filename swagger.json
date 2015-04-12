@@ -398,6 +398,50 @@
           "Tags"
         ]
       }
+    },
+    "/questions/{question_id}/ask/organization/": {
+      "get": {
+        "summary": "ask question: organization",
+        "description": "ask question: organization",
+        "operationId": "askQuestionOrganization",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "organization_id",
+            "in": "query",
+            "description": "organization id to ask of",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "question response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/question"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Question"
+        ]
+      }
     }
   },
   "definitions": {
@@ -407,7 +451,7 @@
           "description": "id for the question",
           "type": "integer",
           "format": "id"
-        },      
+        },
         "title": {
           "description": "name of the question",
           "type": "string",
