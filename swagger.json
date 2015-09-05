@@ -399,7 +399,7 @@
         ]
       }
     },
-    "/questions/{question_id}/ask/organization/": {
+    "/questions/{question_id}/ask/organization/{organization_id}": {
       "get": {
         "summary": "ask question: organization",
         "description": "ask question: organization",
@@ -411,7 +411,14 @@
             "description": "the id of the question to ask",
             "required": true,
             "type": "string"
-          },        
+          },
+          {
+            "name": "organization_id",
+            "in": "path",
+            "description": "the id of the organization to ask of",
+            "required": true,
+            "type": "string"
+          },
           {
             "name": "appid",
             "in": "query",
@@ -447,6 +454,183 @@
         },
         "tags": [
           "Question"
+        ]
+      }
+    },
+    "/questions/ask/organization/": {
+      "get": {
+        "summary": "ask question: organization",
+        "description": "ask question: organization",
+        "operationId": "askOrganization",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "organization_id",
+            "in": "query",
+            "description": "organization id to ask of",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "question response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/question"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Question"
+        ]
+      }
+    },
+    "/questions/ask/organization/{organization_id}/": {
+      "get": {
+        "summary": "ask question: organization",
+        "description": "ask question: organization",
+        "operationId": "askQuestionsofOrganization",
+        "parameters": [
+          {
+            "name": "organization_id",
+            "in": "path",
+            "description": "the id of the organization to ask",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "organization_id",
+            "in": "query",
+            "description": "organization id to ask of",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "question response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/question"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Question"
+        ]
+      }
+    },
+    "/questions/tags/": {
+      "get": {
+        "summary": "question tags",
+        "description": "question tags",
+        "operationId": "getQuestionTags",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the question",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the question",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Question Tags Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      }
+    },
+    "/questions/tags/{tag}/": {
+      "delete": {
+        "summary": "question tags",
+        "description": "question tags",
+        "operationId": "getquestionTag",
+        "parameters": [
+          {
+            "name": "tag",
+            "in": "path",
+            "description": "tag to delete",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the question",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the question",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Question Tags Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
         ]
       }
     }
