@@ -17,8 +17,8 @@
   "paths": {
     "/questions/": {
       "get": {
-        "summary": "question questions",
-        "description": "question questions",
+        "summary": "get questions",
+        "description": "get questions",
         "operationId": "getQuestionTerms",
         "parameters": [
           {
@@ -110,8 +110,8 @@
     },
     "/questions/{question_id}/": {
       "get": {
-        "summary": "question question",
-        "description": "question question",
+        "summary": "get question",
+        "description": "get question",
         "operationId": "getQuestionTerm",
         "parameters": [
           {
