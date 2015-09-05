@@ -1,0 +1,444 @@
+{
+	"id": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+	"name": "Question",
+	"description": "This is an API question, allowing me to add detailss for key questions and phrases used in the API space.",
+	"order": [],
+	"folders": [
+		{
+			"id": "8a5908ec-8378-5004-9de3-ff8d88051674",
+			"name": "questions",
+			"description": "Folder for questions",
+			"order": [
+				"10620c10-9362-236d-2f62-31db5b23c8c1",
+				"2200d33b-eeb4-0374-7584-97ab0dce6c3e",
+				"7a7059e7-ecf1-ce49-da8d-af56171492d5",
+				"5bdf9c37-42e8-5aaa-8374-4cc91888cf90",
+				"969f6b6c-d9d8-c85d-c1e4-df175b3905de",
+				"527da153-1a5b-617c-d288-c14109d9c669",
+				"f9d3413f-87cd-7a09-0b3a-d07f53a81b8c",
+				"352ce87c-dbe8-2da5-f766-3e62de2c9011",
+				"ca6df078-5b40-f7a8-734a-09ee77fc7903",
+				"f24c05f2-fca5-ae88-73f1-e7928ca1b2e3",
+				"163a9a23-d327-8f29-f3b5-5d283a3c8769",
+				"f5230c4a-c73d-4d97-d7b2-6fd4406f2876",
+				"b86e5e65-6023-fb02-814e-28927e4feb1b"
+			],
+			"collection_name": "Question",
+			"collection_id": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"collection": "94174b33-8267-4fc0-9fa1-4e7c9af463f2",
+			"owner": "27278",
+			"write": true,
+			"collection_owner": "27278"
+		}
+	],
+	"timestamp": 1413302258635,
+	"owner": "27278",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "10620c10-9362-236d-2f62-31db5b23c8c1",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/?appid={{appid}}&appkey={{appkey}}&query={{query}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "question questions",
+			"descriptionFormat": "html",
+			"time": 1441436126048,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "question questions",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "163a9a23-d327-8f29-f3b5-5d283a3c8769",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/ask/organization/{{organization_id}}/?organization_id={{organization_id}}&appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "ask question: organization",
+			"descriptionFormat": "html",
+			"time": 1441436126049,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "ask question: organization",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "2200d33b-eeb4-0374-7584-97ab0dce6c3e",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "{{title}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "details",
+					"value": "{{details}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "add question",
+			"descriptionFormat": "html",
+			"time": 1441436126048,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "add question",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "352ce87c-dbe8-2da5-f766-3e62de2c9011",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/{{question_id}}/tags/{tag}?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "delete question tag",
+			"descriptionFormat": "html",
+			"time": 1441436126049,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "delete question tag",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "527da153-1a5b-617c-d288-c14109d9c669",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/{{question_id}}/tags/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "question tags",
+			"descriptionFormat": "html",
+			"time": 1441436126048,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "question tags",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "5bdf9c37-42e8-5aaa-8374-4cc91888cf90",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/{{question_id}}/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "PUT",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "{{title}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "details",
+					"value": "{{details}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "update question",
+			"descriptionFormat": "html",
+			"time": 1441436126048,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "update question",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "7a7059e7-ecf1-ce49-da8d-af56171492d5",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/{{question_id}}/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "question question",
+			"descriptionFormat": "html",
+			"time": 1441436126048,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "question question",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "969f6b6c-d9d8-c85d-c1e4-df175b3905de",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/{{question_id}}/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "delete question question",
+			"descriptionFormat": "html",
+			"time": 1441436126048,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "delete question question",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "b86e5e65-6023-fb02-814e-28927e4feb1b",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/tags/{{tag}}/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "question tags",
+			"descriptionFormat": "html",
+			"time": 1441436126049,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "question tags",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "ca6df078-5b40-f7a8-734a-09ee77fc7903",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/{{question_id}}/ask/organization/{organization_id}?organization_id={{organization_id}}&appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "ask question: organization",
+			"descriptionFormat": "html",
+			"time": 1441436126049,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "ask question: organization",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "f24c05f2-fca5-ae88-73f1-e7928ca1b2e3",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/ask/organization/?appid={{appid}}&appkey={{appkey}}&organization_id={{organization_id}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "ask question: organization",
+			"descriptionFormat": "html",
+			"time": 1441436126049,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "ask question: organization",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "f5230c4a-c73d-4d97-d7b2-6fd4406f2876",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/tags/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "question tags",
+			"descriptionFormat": "html",
+			"time": 1441436126049,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "question tags",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		},
+		{
+			"id": "f9d3413f-87cd-7a09-0b3a-d07f53a81b8c",
+			"headers": "",
+			"url": "https://question.api.kinlane.com//questions/{{question_id}}/tags/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "tag",
+					"value": "{{tag}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "add question question",
+			"descriptionFormat": "html",
+			"time": 1441436126049,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "62a7214b-eb5e-df8c-96e8-85308424c41c",
+			"name": "add question question",
+			"folder": "8a5908ec-8378-5004-9de3-ff8d88051674"
+		}
+	]
+}
