@@ -1,4 +1,4 @@
-[{
+{
 	"name": "Kin Lane Question API",
 	"description": "I ask a lot of questions each day about APis. Based upon the good, and the bad behavior I witness in the space, I am constantly recording the questions that I think should be asked. I use this API to add, edit, and manage questions across all of my research areas. I am using this API to quickly organize some of the best practices that I see across the space, being asked by the leading API providers.",
 	"image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-question-mark.png",
@@ -6,7 +6,7 @@
 	"tags": ["Kin Lane Question API"],
 	"created": "2016-04-04",
 	"modified": "2016-04-04",
-	"url": "https://kin-lane.github.io/question/"
+	"url": "https://kin-lane.github.io/question/",
 	"specificationVersion": "0.14",
 	"apis": [{
 		"name": "Kin Lane Question API",
@@ -117,4 +117,4 @@
 		"x-twitter": "apievangelist",
 		"email": "info@apievangelist.com"
 	}]
-}]
+}
